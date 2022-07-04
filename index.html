@@ -1,47 +1,56 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <link rel="stylesheet" type="text/css" href="./assets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:600,700" rel="stylesheet">
-    <title>calculator</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <title>Calculator</title>
 </head>
 
 <body>
-    <div id="container">
-        <div id="calculator">
-            <div id="result">
-                <div id="history">
-                    <p id="history-value"></p>
-                </div>
-                <div id="output">
-                    <p id="output-value"></p>
-                </div>
+    <div class="container">
+        <form name="form">
+            <div class="display">
+                <input type="text" id="display" placeholder="0" name="displayResult" />
             </div>
-            <div id="keyboard">
-                <button class="operator" id="clear">C</button>
-                <button class="operator" id="backspace">CE</button>
-                <button class="operator" id="%">%</button>
-                <button class="operator" id="/">&#247;</button>
-                <button class="number" id="7">7</button>
-                <button class="number" id="8">8</button>
-                <button class="number" id="9">9</button>
-                <button class="operator" id="*">&times;</button>
-                <button class="number" id="4">4</button>
-                <button class="number" id="5">5</button>
-                <button class="number" id="6">6</button>
-                <button class="operator" id="-">-</button>
-                <button class="number" id="1">1</button>
-                <button class="number" id="2">2</button>
-                <button class="number" id="3">3</button>
-                <button class="operator" id="+">+</button>
-                <button class="empty" id="empty"></button>
-                <button class="number" id="0">0</button>
-                <button class="empty" id="empty"></button>
-                <button class="operator" id="=">=</button>
-            </div>
-        </div>
-    </div>
-    <script src="./assets/main.js"></script>
-</body>
+            <div class="buttons">
+                <div class="row">
+                    <input type="button" name="b7" value="7" onClick="calcNumbers(b7.value)">
+                    <input type="button" name="b8" value="8" onClick="calcNumbers(b8.value)">
+                    <input type="button" name="b9" value="9" onClick="calcNumbers(b9.value)">
+                    <input type="button" name="addb" value="+" onClick="calcNumbers(addb.value)">
+                </div>
 
+                <div class="row">
+                    <input type="button" name="b4" value="4"  onClick="calcNumbers(b4.value)">
+                    <input type="button" name="b5" value="5" onClick="calcNumbers(b5.value)">
+                    <input type="button" name="b6" value="6" onClick="calcNumbers(b6.value)">
+                    <input type="button" name="subb" value="-" onClick="calcNumbers(subb.value)">
+                </div>
+
+                <div class="row">
+                    <input type="button" name="b1" value="1" onClick="calcNumbers(b1.value)">
+                    <input type="button" name="b2" value="2" onClick="calcNumbers(b2.value)">
+                    <input type="button" name="b3" value="3" onClick="calcNumbers(b3.value)">
+                    <input type="button" name="mulb" value="*" onClick="calcNumbers(mulb.value)">
+                </div>
+
+                <div class="row">
+                    <input type="button" name="b0" value="0" onClick="calcNumbers(b0.value)">
+                    <input type="button" name="potb" value="." onClick="calcNumbers(potb.value)">
+                    <input type="button" name="divb" value="/" onClick="calcNumbers(divb.value)">
+                    <input type="button" class="red" value="=" onClick="displayResult.value=eval(displayResult.value)">
+                </div>
+                <div id="row">
+                    <input type="button" id="clearNumbers" name="clear" value="c" onclick="">
+                    <input type="button" id="deleteNumber" name="del" value="del" onclick="deleteNum()">
+                </div>
+            </div>
+
+        </form>
+    </div>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>

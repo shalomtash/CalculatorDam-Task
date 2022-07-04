@@ -1,90 +1,72 @@
-body {
-    font-family: "Open Sans", sans-serif;
-    background-color: black;
-  }
-  #container {
-    width: 1000px;
-    height: 550px;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-      url(bgImg.jpg);
-    margin: 20px auto;
-  }
-  #calculator {
-    width: 320px;
-    height: 520px;
-    background-color: #eaedef;
-    margin: 0 auto;
-    top: 100px;
-    position: relative;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  #result {
-    height: 120px;
-  }
-  #history {
-    text-align: right;
-    height: 20px;
-    margin: 0 20px;
-    padding-top: 20px;
-    font-size: 15px;
-    color: #919191;
-  }
-  #output {
-    text-align: right;
-    height: 60px;
-    margin: 10px 20px;
-    font-size: 30px;
-  }
-  #keyboard {
-    height: 400px;
-  }
-  .operator,
-  .number,
-  .empty {
-    width: 50px;
-    height: 50px;
-    margin: 15px;
-    float: left;
-    border-radius: 50%;
-    border-width: 0;
-    font-weight: bold;
-    font-size: 15px;
-  }
-  .number,
-  .empty {
-    background-color: #eaedef;
-  }
-  .number,
-  .operator {
-    cursor: pointer;
-  }
-  .operator:active,
-  .number:active {
-    font-size: 13px;
-  }
-  .operator:focus,
-  .number:focus,
-  .empty:focus {
-    outline: 0;
-  }
-  button:nth-child(4) {
-    font-size: 20px;
-    background-color: #20b2aa;
-  }
-  button:nth-child(8) {
-    font-size: 20px;
-    background-color: #ffa500;
-  }
-  button:nth-child(12) {
-    font-size: 20px;
-    background-color: #f08080;
-  }
-  button:nth-child(16) {
-    font-size: 20px;
-    background-color: #7d93e0;
-  }
-  button:nth-child(20) {
-    font-size: 20px;
-    background-color: #9477af;
-  }
+
+body, html {
+	background: #ECEDEF;
+	margin: 0;
+	padding: 0;
+}
+ 
+.container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.2);
+	border-radius: 14px;
+	padding-bottom: 20px;
+	width: 320px;
+	
+}
+.display {
+	width: 100%;
+	height: 60px;
+	padding: 40px 0;
+	background: #FF0509;
+	border-top-left-radius: 14px;
+	border-top-right-radius: 14px;
+}
+.buttons {
+	padding: 20px 20px 0 20px;
+}
+.row {
+	width: 280px;
+	float: left;
+}
+input[type=button] {
+	width: 60px;
+	height: 60px;
+	float: left;
+	padding: 0;
+	margin: 5px;
+	box-sizing: border-box;
+	background: #ecedef;
+	border: none;
+	font-size: 30px;
+	line-height: 30px;
+	border-radius: 50%;
+	font-weight: 700;
+	color: #5E5858;
+	cursor: pointer;
+	
+}
+input[type=text] {
+	width: 270px;
+	height: 60px;
+	float: left;
+	padding: 0;
+	box-sizing: border-box;
+	border: none;
+	background: none;
+	color: #ffffff;
+	text-align: right;
+	font-weight: 700;
+	font-size: 60px;
+	line-height: 60px;
+	margin: 0 25px;
+	
+}
+.red {
+	background: #FF0509 !important;
+	color: #ffffff !important;
+	
+}
